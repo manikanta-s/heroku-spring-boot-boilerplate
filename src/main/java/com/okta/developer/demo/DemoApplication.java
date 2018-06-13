@@ -23,7 +23,7 @@ public class DemoApplication {
     @Bean
     ApplicationRunner init(CarRepository repository) {
         return args -> {
-            Stream.of("New Ferrari", "Old Jaguar", "New Porsche", "Old Lamborghini", "New Bugatti",
+            Stream.of("Ferrari", "Jaguar", "Porsche", "Lamborghini", "Bugatti",
                     "AMC Gremlin", "Triumph Stag", "Ford Pinto", "Yugo GV").forEach(name -> {
                 Car car = new Car();
                 car.setName(name);
@@ -39,7 +39,7 @@ public class DemoApplication {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
-        config.setAllowedOrigins(Collections.singletonList("https://still-ravine-79015.herokuapp.com"));
+        config.setAllowedOrigins(Collections.singletonList("https://manikanta-achb.herokuapp.com"));
         config.setAllowedMethods(Collections.singletonList("*"));
         config.setAllowedHeaders(Collections.singletonList("*"));
         source.registerCorsConfiguration("/**", config);
